@@ -1,0 +1,83 @@
+<html></html>
+<head> <title> BE MY GALANTINE? 💖 </title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h2 {
+            color: #ff4081;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff4081;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Hey Anna,Will you be my Galentine? 💖</h2>
+        <p>You're the sweetest, most amazing friend, and I'd love to celebrate with you!</p>
+        <p class="heart">💗</p>
+        <div class="buttons">
+            <button class="yes" onclick="showMessage()">Yupp! &#128584;</button>
+            <button class="no" onclick="moveNoButton(this)">Yea &#128580; </button>
+        </div>
+        <p id="message" class="hidden">Yayyy! YOU DESERVE THE WORLD 🎉</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").classList.remove("hidden");
+        }
+        function moveNoButton(button) {
+            button.style.position = "absolute";
+            button.style.left = Math.random() * (window.innerWidth - 100) + "px";
+            button.style.top = Math.random() * (window.innerHeight - 50) + "px";
+        }
+    </script>
+</body>
+
+
+
+</html>
